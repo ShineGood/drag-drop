@@ -1,7 +1,3 @@
-# ASSIGNMENT 2
-
-# METCS601_HW2_fiawoo
-
 # Drag and Drop Fruits & Vegetables Game
 
 A simple and interactive web-based drag and drop sorting game where players sort fruits and vegetables into their correct categories before time runs out. Built with HTML, CSS, and JavaScript (ES Modules).
@@ -115,6 +111,6 @@ This project is created for educational purposes. You are free to use, modify, a
 
 ## Author
 
-Developed by Kokoe Fiawoo
+Developed by Kokoe
 
 
