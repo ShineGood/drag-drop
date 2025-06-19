@@ -2,7 +2,7 @@
 let timerInterval;
 
 // Remaining time in seconds
-let timeLeft = 60;
+let timeLeft = 120;
 
 // Flag indicating whether the timer is paused
 let paused = false;
