@@ -130,3 +130,28 @@ function resetAll() {
 
   document.getElementById("gameOverModal").classList.add("hidden");
 }
+
+const imageNames = [
+  "banana.png",
+  "apple.png",
+  "grape.png",
+  "orange.png",
+  "strawberry.png",
+  "watermelon.png",
+  "carrot.png",
+  "corn.png",
+  "broccoli.png",
+  "cabbage.png",
+  "pepper.png",
+  "potato.png",
+  "onion.png",
+  "tomato.png"
+];
+
+const images = {};
+
+imageNames.forEach(name => {
+  const img = new Image();
+  img.src = `images/${name}`;
+  images[name] = img;
+});
