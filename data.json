@@ -1,22 +1,22 @@
 {
     "fruits": [
-        { "id": 1, "name": "Grape", "category": "fruit", "image": "images/grape.png" },
-        { "id": 2, "name": "Watermelon", "category": "fruit", "image": "images/watermelon.png"},
-        { "id": 3, "name": "Mandarin", "category": "fruit", "image": "images/mandarin.png" },
-        { "id": 4, "name": "Star Fruit", "category": "fruit", "image": "images/star-fruit.png" },
-        { "id": 5, "name": "Peach", "category": "fruit", "image": "images/peach.png" },
-        {"id": 6, "name": "Lime", "category": "fruit", "image": "images/lime.png" },
-        {"id": 7, "name": "Baobab", "category": "fruit", "image": "images/baobab.png"}
+        { "id": 1, "name": "Grape", "category": "fruit", "image": "grape.png" },
+        { "id": 2, "name": "Watermelon", "category": "fruit", "image": "watermelon.png"},
+        { "id": 3, "name": "Mandarin", "category": "fruit", "image": "mandarin.png" },
+        { "id": 4, "name": "Star Fruit", "category": "fruit", "image": "star-fruit.png" },
+        { "id": 5, "name": "Peach", "category": "fruit", "image": "peach.png" },
+        {"id": 6, "name": "Lime", "category": "fruit", "image": "lime.png" },
+        {"id": 7, "name": "Baobab", "category": "fruit", "image": "baobab.png"}
 
   ],
   "vegetables": [
-        { "id": 8, "name": "Potato", "category": "vegetable", "image": "images/potato.png"  },
-        { "id": 9, "name": "Yam", "category": "vegetable", "image": "images/yam.png" },
-        { "id": 10, "name": "Plantain", "category": "vegetable","image": "images/plantain.png" },
-        { "id": 11, "name": "Onion", "category": "vegetable", "image": "images/onion.png" },
-        { "id": 12, "name": "Tomato", "category": "vegetable", "image": "images/tomato.png" },
-        { "id": 13, "name": "Brocoli", "category": "vegetable","image": "images/brocoli.png" },
-        { "id": 14, "name": "Jute leave", "category": "vegetable", "image": "images/jute-leave.png" }
+        { "id": 8, "name": "Potato", "category": "vegetable", "image": "potato.png"  },
+        { "id": 9, "name": "Yam", "category": "vegetable", "image": "yam.png" },
+        { "id": 10, "name": "Plantain", "category": "vegetable","image": "plantain.png" },
+        { "id": 11, "name": "Onion", "category": "vegetable", "image": "onion.png" },
+        { "id": 12, "name": "Tomato", "category": "vegetable", "image": "tomato.png" },
+        { "id": 13, "name": "Brocoli", "category": "vegetable","image": "brocoli.png" },
+        { "id": 14, "name": "Jute leave", "category": "vegetable", "image": "jute-leave.png" }
     ]
 
 }
