@@ -1,0 +1,265 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* =====================
+   CONTAINER & DROP ZONES
+===================== */
+
+.container,
+.drop-zone {
+  border: 2px dashed #bdc3c7;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  min-height: 60px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.drop-zone h3 {
+  width: 100%;
+  border: 3px solid #3498db;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* =====================
+   DRAGGABLE ITEMS
+===================== */
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ecf0f1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: grab;
+  font-weight: 500;
+  color: #2c3e50;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.item-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.item:hover {
+  background-color: #d0d3d4;
+  transform: scale(1.05);
+}
+
+/* Visual feedback when dragging over a drop zone */
+.drop-zone.dragover {
+  background-color: #dff9fb;
+  border-color: #74b9ff;
+}
+
+.footer {
+  background-color: #043464;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+@media (max-width: 600px) {
+  .container,
+  .drop-zone {
+    width: 95%;
+  }
+
+  .item-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .item {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* =====================
+   CONTROLS & BUTTONS
+===================== */
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Reset Button */
+#resetBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+#resetBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Pause Button */
+#pauseBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #167532b9;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+#pauseBtn:hover {
+  background-color: #304dced2;
+}
+
+/* Scoreboard Styles */
+.scoreboard {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.scoreboard span {
+  margin: 0 10px;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+
+/* Shake animation for lives */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+#lives.shake {
+  animation: shake 0.5s;
+  color: red;
+}
+
+/* Flash animation when a life is lost */
+@keyframes flashRed {
+  0%, 100% { color: #e74c3c; }
+  50% { 
+    color: #fff; 
+    background-color: #e74c3c; 
+    border-radius: 4px; 
+    padding: 0 6px; 
+  }
+}
+
+.lives-flash {
+  animation: flashRed 0.5s ease 2;
+}
+
+/* Animate dropped item popping into place */
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.item.animate-drop {
+  animation: popIn 0.4s ease;
+}
+
+/* =====================
+   MODAL (Game Over)
+===================== */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #e74c3c;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #2980b9;
+}
+
+.hidden {
+  display: none;
+}

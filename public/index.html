@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" >
+  <title>Drag and Drop Fruits & Vegetables</title>
+
+   <!-- 
+    Author: Kokoe Fiawoo
+    Project: Fruit & Vegetable Sorter Game
+    Created: May 20, 2025
+    Copyright © 2025 Kokoe Fiawoo. All rights reserved.
+  -->
+</head>
+<body>
+  <!-- Game Title -->
+  <h1>🥗 Fruit & Vegetable Sorter Game</h1>
+
+  <!-- Control buttons and score display -->
+  <div class="controls">
+    <!-- Reset and Pause Buttons -->
+    <button id="resetBtn">Reset</button>
+    <button id="pauseBtn">⏸️ Pause</button>
+
+    <!-- Scoreboard: Shows count of fruits, vegetables, lives, and timer -->
+    <div class="scoreboard">
+      <span>🍌Fruits: <strong id="fruitCount">0</strong></span> |
+      <span>🌽Vegetables: <strong id="vegCount">0</strong></span> |
+      <span>Lives: <strong id="lives">3</strong> ❤️</span> |
+      <span>Time Left: <strong id="timer">60</strong> ⏳</span>
+    </div>
+  </div>
+  
+  <!-- Container where draggable items will be dynamically added -->
+  <div class="container" id="itemsContainer"></div>
+
+  <!-- Drop Zone for Fruits -->
+  <div class="drop-zone" id="fruitZone">
+    <h3>Fruits</h3>
+  </div>
+
+  <!-- Drop Zone for Vegetables -->
+  <div class="drop-zone" id="vegetableZone">
+    <h3>Vegetables</h3>
+  </div>
+
+  <!-- Modal for Game Over -->
+  <div id="gameOverModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>💀 Game Over!</h2>
+      <p>You ran out of lives. Try again?</p>
+      <button id="restartBtn">Restart Game</button>
+    </div>
+  </div>
+  <footer>
+        <p>Thank you for visiting!</p>
+        <p>&copy; Kokoe Fiawoo. All rights reserved.</p>
+  </footer>
+
+  <!-- Sound Effects for Feedback -->
+  <audio id="errorSound" src="sounds/error.mp3" preload="auto"></audio>
+  <audio id="successSound" src="sounds/success.mp3" preload="auto"></audio>
+
+  <!-- Main JavaScript module for game logic -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
